@@ -1,8 +1,6 @@
 pipeline {
-    agent {
-        label "built-in"
-        customWorkspace "/root/project"
-    }
+    agent any
+    
     tools {
         maven "maven"
     }
@@ -25,3 +23,4 @@ pipeline {
         }
     }
 }
+
