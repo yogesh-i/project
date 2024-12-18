@@ -11,9 +11,11 @@ pipeline {
 		    steps {
 		        sh "rm -rf /root/.m2/repository"
 				}
+				}
         stage ("two") {
 		    steps {
 			    sh "mvn clean install"
+			}
 			}
 		stage ("three") {
 		    steps {
@@ -27,5 +29,4 @@ pipeline {
 		
 }
 }
-}
-}
+
