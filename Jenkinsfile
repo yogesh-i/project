@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+	label {
+	label "built-in"
+	customWorkspace "/root/project"
+	}
+	}
     
     tools {
         maven "maven"
@@ -21,6 +26,5 @@ pipeline {
                 sh "chmod -R 777 /root/tomcat"
             }
         }
-    }
+    
 }
-
