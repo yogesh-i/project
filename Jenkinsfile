@@ -4,7 +4,7 @@ pipeline {
         label "built-in"
         customWorkspace '/root'
     }
-
+}
     tools {
         maven "maven"
     }
