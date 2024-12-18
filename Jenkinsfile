@@ -5,6 +5,7 @@ pipeline {
 			customWorkspace "/root/project"
         tools {
             maven "maven"
+			}
     stages {
 	    stage ("one") {
 		    steps {
@@ -22,7 +23,7 @@ pipeline {
 			}
 		}
 	}
-}		
+		
 }
 }
 }
