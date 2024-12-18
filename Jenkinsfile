@@ -13,16 +13,17 @@ pipeline {
         }
         stage("two") {
             steps {
-			    sh "cd /root/project"
+			  
                 sh "mvn clean install"
             }
         }
         stage("three") {
             steps {
-                sh "cp /root/project/target/LoginWebApp.war /root/tomcat/webapps"
+                sh "cp/root/.jenkins/workspace/project/target/LoginWebApp.war  /root/tomcat/webapps"
                 sh "chmod -R 777 /root/tomcat"
             }
         }
     }
 }
+
 
