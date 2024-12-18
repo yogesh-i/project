@@ -1,8 +1,5 @@
 pipeline {
-    agent {
-        label "built-in"
-        customWorkspace "/root/project"
-    }
+    agent any
     
     tools {
         maven "maven"
@@ -16,6 +13,7 @@ pipeline {
         }
         stage("two") {
             steps {
+			    sh "cd /root/project"
                 sh "mvn clean install"
             }
         }
