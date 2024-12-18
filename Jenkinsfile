@@ -1,6 +1,6 @@
 pipeline {
-    agent {
-        label "built-in"
+    agent any {
+        
         customWorkspace "/root/project"
     }
     
@@ -27,3 +27,4 @@ pipeline {
         }
     } 
 } 
+
