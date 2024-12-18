@@ -1,14 +1,13 @@
 pipeline {
     agent {
-	label {
-	label "built-in"
-	customWorkspace "/root/project"
-	}
-	}
+        label "built-in"
+        customWorkspace "/root/project"
+    }
     
     tools {
         maven "maven"
     }
+    
     stages {
         stage("one") {
             steps {
@@ -26,5 +25,5 @@ pipeline {
                 sh "chmod -R 777 /root/tomcat"
             }
         }
-    
-}
+    } 
+} 
