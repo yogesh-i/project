@@ -19,11 +19,10 @@ pipeline {
         }
         stage("three") {
             steps {
-                sh "cp/root/.jenkins/workspace/project/target/LoginWebApp.war  /root/tomcat/webapps"
+                sh "cp /root/.jenkins/workspace/project/target/LoginWebApp.war  /root/tomcat/webapps"
                 sh "chmod -R 777 /root/tomcat"
             }
         }
     }
 }
-
 
